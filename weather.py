@@ -40,7 +40,10 @@ def Main():
         response = session.get(url, verify=True)
     except (ConnectionError, Timeout, TooManyRedirects) as e:
         print(e)
-        
+    finally:
+        output(response)
+
+def output(response):   
     if '-h' in arg:
         hourlyTemp = []
         hourlyHum = []
@@ -88,7 +91,6 @@ def Main():
         dir = dirs[ix % len(dirs)]
         print(f"{time} | {temp} °C | {speed} m/s {dir} wind")
     
-         
-        
-
+    
+    
 Main()
