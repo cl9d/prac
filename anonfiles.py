@@ -11,4 +11,5 @@ def Main():
     data = response.json()
     print(data['data']['file']['url']['short']) 
     
-Main()
+if __name__ == '__main__':
+    Main()

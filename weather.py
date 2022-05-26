@@ -91,6 +91,5 @@ def output(response):
         dir = dirs[ix % len(dirs)]
         print(f"{time} | {temp} °C | {speed} m/s {dir} wind")
     
-    
-    
-Main()
+if __name__ == '__main__':
+    Main()
