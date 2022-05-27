@@ -13,8 +13,8 @@ def Main():
     if not arg or arg[0].startswith('-'):
         print(f"Please enter a valid city")
         return
-    if '--h' in arg:
-        print(f"usage: weather [city] \noptional arguments: \n\t--h : returns this help message \n\t-c : current weather \n\t-d : 7 day weather forecast \n\t-h : 24 hour forecast")
+    if '/?' in arg:
+        print(f"usage: py weather.py [city] \noptional arguments: \n\t/? : returns this help message \n\t-c : current weather \n\t-d : 7 day weather forecast \n\t-h : 24 hour forecast")
         return
     if len(arg) > 2:
         print("Please choose one forecast timeframe : -c, -h, or -d")
